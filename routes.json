@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "attribution": "openLayers",
+    "service": "routing",
+    "timestamp": 0,
+    "query": {
+      "coordinates": [
+        [0, -0],
+        [0, -0]
+      ],
+      "profile": "opt",
+      "format": "json"
+    },
+    "engine": {
+      "version": "7.1.1",
+      "build_date": "2024-01-29T14:41:12Z",
+      "graph_date": "2024-03-17T13:51:27Z"
+    }
+  },
+  "routes": [
+    {
+      "summary": {
+        "distance": 0,
+        "duration": 0
+      },
+      "segments": [
+        {
+          "distance": 0,
+          "duration": 0,
+          "steps": [
+            {
+              "distance": 0,
+              "duration": 0,
+              "type": 0,
+              "instruction": "-",
+              "name": "-",
+              "way_points": [0, 0]
+            },
+            {
+              "distance": 0,
+              "duration": 0,
+              "type": 0,
+              "instruction": "-",
+              "name": "-",
+              "way_points": [0, 0]
+            },
+            {
+              "distance": 0,
+              "duration": 0,
+              "type": 0,
+              "instruction": "-",
+              "name": "-",
+              "way_points": [0, 0]
+            }
+          ]
+        }
+      ],
+      "bbox": [0, -0, 0, -0],
+      "geometry": "-",
+      "way_points": [0, 0],
+      "legs": []
+    }
+  ],
+  "bbox": [0, -0, 0, -0]
+}

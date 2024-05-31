@@ -1,0 +1,41 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js
+
+PATH: 
+  C:\Program Files (x86)\Borland\Delphi7\Bin;C:\Program Files (x86)\Borland\Delphi7\Projects\Bpl\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\laragon\bin\mysql\mysql-8.0.30-winx64\bin;C:\laragon\bin\php\php-8.1.10-Win32-vs16-x64;C:\composer;C:\Users\erwin\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Python 3.10;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Users\erwin\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\erwin\AppData\Local\Programs\Python\Python310\;C:\Users\erwin\AppData\Local\Microsoft\WindowsApps;C:\Users\erwin\AppData\Roaming\npm;C:\Users\erwin\AppData\Local\Yarn\bin;C:\Users\erwin\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\erwin\AppData\Roaming\Composer\vendor\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.3.3\bin;;C:\Program Files\JetBrains\PyCharm Community Edition 2023.1\bin;;C:\Program Files\JetBrains\DataGrip 2023.3.1\bin;
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.14.2
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: getaddrinfo ENOTFOUND registry.yarnpkg.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
+
+npm manifest: 
+  {
+    "name": "shelter",
+    "version": "1.0.0",
+    "scripts": {
+      "start": "vite",
+      "build": "vite build",
+      "serve": "vite preview"
+    },
+    "devDependencies": {
+      "vite": "^5.0.11"
+    },
+    "dependencies": {
+      "ol": "^8.2.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
