@@ -96,3 +96,28 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   z-index: 1000;
 }
+
+.random-marker {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  border-radius: 50%;
+}
+
+.random-marker .popup {
+  position: absolute;
+  top: -30px;
+  left: -20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.random-marker .popup-content {
+  font-size: 12px;
+  font-weight: bold;
+  color: black;
+}

@@ -31,11 +31,62 @@ const map = new Map({
 const data = {
   coordinates: [
     [119.428038, -5.153766],
-    [119.428065, -5.150766],
+    [119.428491, -5.15286],
   ],
 };
 
-const url = getPathUrl("driving");
+const generateRandomCoordinates = (center, radius, numPoints) => {
+  const randomCoordinates = [];
+  const [centerLon, centerLat] = center;
+
+  for (let i = 0; i < numPoints; i++) {
+    const angle = Math.random() * 2 * Math.PI;
+    const distance = Math.random() * radius;
+    const newLon = centerLon + distance * Math.cos(angle);
+    const newLat = centerLat + distance * Math.sin(angle);
+    randomCoordinates.push([newLon, newLat]);
+  }
+
+  return randomCoordinates;
+};
+
+const centerPoint = [119.428038, -5.153766];
+const radius = 0.01;
+const numPoints = 10;
+
+const randomCoordinates = generateRandomCoordinates(
+  centerPoint,
+  radius,
+  numPoints
+);
+console.log(randomCoordinates);
+
+randomCoordinates.forEach((coord) => {
+  const markerElement = document.createElement("div");
+  markerElement.classList.add("random-marker");
+
+  const popupElement = document.createElement("div");
+  popupElement.classList.add("popup");
+
+  const contentElement = document.createElement("div");
+  contentElement.classList.add("popup-content");
+  contentElement.innerText = "Aman";
+
+  popupElement.appendChild(contentElement);
+
+  markerElement.appendChild(popupElement);
+
+  const markerOverlay = new Overlay({
+    position: fromLonLat(coord),
+    positioning: "center-center",
+    element: markerElement,
+    stopEvent: false,
+  });
+
+  map.addOverlay(markerOverlay);
+});
+
+const url = getPathUrl("walking");
 
 axios
   .post(url, data, { headers })

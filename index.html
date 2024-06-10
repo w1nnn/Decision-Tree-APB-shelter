@@ -9,20 +9,87 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/css/output.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
     <title>Shelter APB</title>
     <style>
-      #map {
+      #map-container {
+        position: relative;
         width: 100%;
         height: 100vh;
+        font-weight: bold;
+      }
+
+      #map {
+        width: 100%;
+        height: 100%;
+      }
+
+      #buttons-container {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+      }
+      #searchButton {
+        background-color: #8bc6ec;
+        background-color: #85ffbd;
+        background-color: #f4d03f;
+        background-image: linear-gradient(132deg, #f4d03f 0%, #16a085 100%);
+        width: 150px;
+      }
+
+      #gotoLocationButton {
+        background-color: #fbab7e;
+        background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+        width: 140px;
+      }
+
+      .button {
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 120px;
+        height: auto;
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+      }
+
+      #status {
+        width: 57px;
+        background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
       }
     </style>
   </head>
   <body>
-    <div id="map"></div>
     <div id="marker"></div>
     <div id="info"></div>
-
-    <a id="status">Aman</a>
+    <div id="map-container">
+      <div id="map"></div>
+      <div id="buttons-container">
+        <button id="searchButton" class="button">
+          <i class="bi bi-building-check"></i> Shelters
+        </button>
+        <button id="gotoLocationButton" class="button">
+          <i class="bi bi-sign-turn-left-fill"></i> Directions
+        </button>
+        <button id="status" class="button">
+          <i class="bi bi-question-circle"></i>
+        </button>
+      </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/ol/dist/ol.js"></script>
     <script type="module" src="./main.js"></script>
