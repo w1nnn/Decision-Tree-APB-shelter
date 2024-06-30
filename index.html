@@ -17,6 +17,25 @@
       rel="stylesheet"
       href="node_modules/bootstrap-icons/font/bootstrap-icons.css"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS Libraries -->
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/components.css" />
     <title>Shelter APB</title>
     <style>
       #map-container {
@@ -37,22 +56,37 @@
         left: 50%;
         transform: translateX(-50%);
         display: flex;
-        gap: 10px;
+        gap: 4px;
         justify-content: center;
         align-items: center;
       }
+      #my-status {
+        background-image: radial-gradient(
+          circle 666px at 0.4% 48%,
+          rgba(202, 204, 227, 1) 0%,
+          rgba(89, 89, 99, 1) 97.5%
+        );
+        width: 120px;
+        color: #000;
+      }
       #searchButton {
-        background-color: #8bc6ec;
-        background-color: #85ffbd;
-        background-color: #f4d03f;
-        background-image: linear-gradient(132deg, #f4d03f 0%, #16a085 100%);
-        width: 150px;
+        background-image: linear-gradient(
+          108deg,
+          rgba(242, 245, 139, 1) 17.7%,
+          rgba(148, 197, 20, 0.68) 91.2%
+        );
+        width: 130px;
+        color: #000;
       }
 
       #gotoLocationButton {
-        background-color: #fbab7e;
-        background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
-        width: 140px;
+        background-image: linear-gradient(
+          109.6deg,
+          rgba(204, 228, 247, 1) 11.2%,
+          rgba(237, 246, 250, 1) 100.2%
+        );
+        color: #000;
+        width: 125px;
       }
 
       .button {
@@ -73,25 +107,347 @@
       }
     </style>
   </head>
-  <body>
+  <body class="layout-3">
+    <nav class="navbar navbar-expand-sm main-navbar">
+      <form class="form-inline ml-auto">
+        <div class="search-element">
+          <input
+            class="form-control"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+            data-width="250"
+          />
+          <button class="btn" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+          <div class="search-backdrop"></div>
+          <div class="search-result">
+            <div class="search-header">Result</div>
+            <div class="search-item">
+              <a href="#">
+                <img
+                  class="mr-3 rounded"
+                  width="30"
+                  src="../assets/img/products/product-3-50.png"
+                  alt="product"
+                />
+                oPhone S9 Limited Edition
+              </a>
+            </div>
+            <div class="search-item">
+              <a href="#">
+                <img
+                  class="mr-3 rounded"
+                  width="30"
+                  src="../assets/img/products/product-2-50.png"
+                  alt="product"
+                />
+                Drone X2 New Gen-7
+              </a>
+            </div>
+            <div class="search-item">
+              <a href="#">
+                <img
+                  class="mr-3 rounded"
+                  width="30"
+                  src="../assets/img/products/product-1-50.png"
+                  alt="product"
+                />
+                Headphone Blitz
+              </a>
+            </div>
+            <div class="search-header">Projects</div>
+            <div class="search-item">
+              <a href="#">
+                <div class="search-icon bg-danger text-white mr-3">
+                  <i class="fas fa-code"></i>
+                </div>
+                Stisla Admin Template
+              </a>
+            </div>
+            <div class="search-item">
+              <a href="#">
+                <div class="search-icon bg-primary text-white mr-3">
+                  <i class="fas fa-laptop"></i>
+                </div>
+                Create a new Homepage Design
+              </a>
+            </div>
+          </div>
+        </div>
+      </form>
+      <ul class="navbar-nav navbar-right">
+        <li class="dropdown dropdown-list-toggle">
+          <a
+            style="
+              background-image: radial-gradient(
+                circle 343px at 46.3% 47.5%,
+                rgba(242, 242, 242, 1) 0%,
+                rgba(241, 241, 241, 1) 72.9%
+              );
+              color: #000;
+              margin-left: 10px;
+              border-radius: 10px;
+            "
+            href="#"
+            data-toggle="dropdown"
+            class="nav-link nav-link-lg message-toggle beep"
+            ><i class="far fa-envelope"></i
+          ></a>
+          <div class="dropdown-menu dropdown-list dropdown-menu-right">
+            <div class="dropdown-header">
+              Messages
+              <div class="float-right">
+                <a href="#">Mark All As Read</a>
+              </div>
+            </div>
+            <div class="dropdown-list-content dropdown-list-message">
+              <a href="#" class="dropdown-item dropdown-item-unread">
+                <div class="dropdown-item-avatar">
+                  <img
+                    alt="image"
+                    src="../assets/img/avatar/avatar-1.png"
+                    class="rounded-circle"
+                  />
+                  <div class="is-online"></div>
+                </div>
+                <div class="dropdown-item-desc">
+                  <b>Kusnaedi</b>
+                  <p>Hello, Bro!</p>
+                  <div class="time">10 Hours Ago</div>
+                </div>
+              </a>
+              <a href="#" class="dropdown-item dropdown-item-unread">
+                <div class="dropdown-item-avatar">
+                  <img
+                    alt="image"
+                    src="../assets/img/avatar/avatar-2.png"
+                    class="rounded-circle"
+                  />
+                </div>
+                <div class="dropdown-item-desc">
+                  <b>Dedik Sugiharto</b>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                  </p>
+                  <div class="time">12 Hours Ago</div>
+                </div>
+              </a>
+              <a href="#" class="dropdown-item dropdown-item-unread">
+                <div class="dropdown-item-avatar">
+                  <img
+                    alt="image"
+                    src="../assets/img/avatar/avatar-3.png"
+                    class="rounded-circle"
+                  />
+                  <div class="is-online"></div>
+                </div>
+                <div class="dropdown-item-desc">
+                  <b>Agung Ardiansyah</b>
+                  <p>
+                    Sunt in culpa qui officia deserunt mollit anim id est
+                    laborum.
+                  </p>
+                  <div class="time">12 Hours Ago</div>
+                </div>
+              </a>
+              <a href="#" class="dropdown-item">
+                <div class="dropdown-item-avatar">
+                  <img
+                    alt="image"
+                    src="../assets/img/avatar/avatar-4.png"
+                    class="rounded-circle"
+                  />
+                </div>
+                <div class="dropdown-item-desc">
+                  <b>Ardian Rahardiansyah</b>
+                  <p>
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    ess
+                  </p>
+                  <div class="time">16 Hours Ago</div>
+                </div>
+              </a>
+              <a href="#" class="dropdown-item">
+                <div class="dropdown-item-avatar">
+                  <img
+                    alt="image"
+                    src="../assets/img/avatar/avatar-5.png"
+                    class="rounded-circle"
+                  />
+                </div>
+                <div class="dropdown-item-desc">
+                  <b>Alfa Zulkarnain</b>
+                  <p>
+                    Exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  </p>
+                  <div class="time">Yesterday</div>
+                </div>
+              </a>
+            </div>
+            <div class="dropdown-footer text-center">
+              <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+            </div>
+          </div>
+        </li>
+        <li class="dropdown dropdown-list-toggle">
+          <a
+            style="
+              background-image: linear-gradient(
+                109.6deg,
+                rgba(223, 234, 247, 1) 11.2%,
+                rgba(244, 248, 252, 1) 91.1%
+              );
+              color: #000;
+              margin-left: 10px;
+              border-radius: 10px;
+            "
+            href="#"
+            data-toggle="dropdown"
+            class="nav-link notification-toggle nav-link-lg beep"
+            ><i class="far fa-bell"></i
+          ></a>
+          <div class="dropdown-menu dropdown-list dropdown-menu-right">
+            <div class="dropdown-header">
+              Notifications
+              <div class="float-right">
+                <a href="#">Mark All As Read</a>
+              </div>
+            </div>
+            <div class="dropdown-list-content dropdown-list-icons">
+              <a href="#" class="dropdown-item dropdown-item-unread">
+                <div class="dropdown-item-icon bg-primary text-white">
+                  <i class="fas fa-code"></i>
+                </div>
+                <div class="dropdown-item-desc">
+                  Template update is available now!
+                  <div class="time text-primary">2 Min Ago</div>
+                </div>
+              </a>
+              <a href="#" class="dropdown-item">
+                <div class="dropdown-item-icon bg-info text-white">
+                  <i class="far fa-user"></i>
+                </div>
+                <div class="dropdown-item-desc">
+                  <b>You</b> and <b>Dedik Sugiharto</b> are now friends
+                  <div class="time">10 Hours Ago</div>
+                </div>
+              </a>
+              <a href="#" class="dropdown-item">
+                <div class="dropdown-item-icon bg-success text-white">
+                  <i class="fas fa-check"></i>
+                </div>
+                <div class="dropdown-item-desc">
+                  <b>Kusnaedi</b> has moved task <b>Fix bug header</b> to
+                  <b>Done</b>
+                  <div class="time">12 Hours Ago</div>
+                </div>
+              </a>
+              <a href="#" class="dropdown-item">
+                <div class="dropdown-item-icon bg-danger text-white">
+                  <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="dropdown-item-desc">
+                  Low disk space. Let's clean it!
+                  <div class="time">17 Hours Ago</div>
+                </div>
+              </a>
+              <a href="#" class="dropdown-item">
+                <div class="dropdown-item-icon bg-info text-white">
+                  <i class="fas fa-bell"></i>
+                </div>
+                <div class="dropdown-item-desc">
+                  Welcome to Stisla template!
+                  <div class="time">Yesterday</div>
+                </div>
+              </a>
+            </div>
+            <div class="dropdown-footer text-center">
+              <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+            </div>
+          </div>
+        </li>
+
+        <li class="dropdown">
+          <a
+            href="#"
+            data-toggle="dropdown"
+            class="nav-link nav-link-lg nav-link-user"
+          >
+            <img
+              alt="image"
+              src="./assets/img/5.jpg"
+              class="rounded-circle mr-1"
+            />
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <div class="dropdown-title">Logged in 5 min ago</div>
+            <a href="features-profile.html" class="dropdown-item has-icon">
+              <i class="far fa-user"></i> Profile
+            </a>
+            <a href="features-activities.html" class="dropdown-item has-icon">
+              <i class="fas fa-bolt"></i> Activities
+            </a>
+            <a href="features-settings.html" class="dropdown-item has-icon">
+              <i class="fas fa-cog"></i> Settings
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item has-icon text-danger">
+              <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <!-- <div class="main-content"> -->
     <div id="marker"></div>
-    <div id="info"></div>
+    <div iv id="info"></div>
     <div id="map-container">
       <div id="map"></div>
       <div id="buttons-container">
+        <button id="my-status" class="button">
+          <i class="bi bi-question-circle"></i> Status
+        </button>
         <button id="searchButton" class="button">
           <i class="bi bi-building-check"></i> Shelters
         </button>
         <button id="gotoLocationButton" class="button">
           <i class="bi bi-sign-turn-left-fill"></i> Directions
         </button>
-        <button id="status" class="button">
+        <!-- <button id="status" class="button">
           <i class="bi bi-question-circle"></i>
-        </button>
+        </button> -->
       </div>
+      <!-- </div> -->
     </div>
+    <!-- End Main Content -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/ol/dist/ol.js"></script>
     <script type="module" src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/stisla.js"></script>
+
+    <!-- JS Libraies -->
+
+    <!-- Page Specific JS File -->
+
+    <!-- Template JS File -->
+    <script src="./assets/js/scripts.js"></script>
+    <script src="./assets/js/custom.js"></script>
   </body>
 </html>

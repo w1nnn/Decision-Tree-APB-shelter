@@ -70,7 +70,7 @@ randomCoordinates.forEach((coord) => {
 
   const contentElement = document.createElement("div");
   contentElement.classList.add("popup-content");
-  contentElement.innerText = "Aman";
+  contentElement.innerText = "Secure";
 
   popupElement.appendChild(contentElement);
 
